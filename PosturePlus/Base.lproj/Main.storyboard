@@ -24,6 +24,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnEnterPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Nk-UN-Zuc"/>
+                                    <segue destination="la2-fz-4Ai" kind="show" id="1wG-S3-qXF"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8s-YA-1GO" customClass="DrawFrame" customModule="PosturePlus" customModuleProvider="target">
@@ -39,6 +40,9 @@
                                         <rect key="frame" x="27" y="66" width="171" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="CoreIDChanged" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="Yzc-oI-EZV"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95m-KN-rpf">
                                         <rect key="frame" x="27" y="154" width="171" height="30"/>
@@ -72,6 +76,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7qs-ff-Occ">
+            <objects>
+                <viewController id="la2-fz-4Ai" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K0A-f9-ROc"/>
+                        <viewControllerLayoutGuide type="bottom" id="AnT-Y5-hcO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oq9-Xq-41o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7S-G6-dlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="239"/>
         </scene>
     </scenes>
 </document>

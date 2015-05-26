@@ -16,7 +16,6 @@ class Model {
     var GSAccessToken:String {
         set (newAccessToken) {
             self.AccessToken = newAccessToken
-            println(AccessToken)
         }
         get {
             return AccessToken
@@ -26,7 +25,6 @@ class Model {
     var GSCoreID:String {
         set (newCoreID) {
             self.CoreID = newCoreID
-            println(CoreID)
         }
         get {
             return CoreID

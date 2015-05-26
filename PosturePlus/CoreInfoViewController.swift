@@ -18,7 +18,7 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtCoreID: UITextField!
     @IBOutlet weak var btnEnter: UIButton!
     
-    @IBAction func btnEnterPressed(){
+    @IBAction func CoreIDChanged(){
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         
@@ -31,6 +31,25 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
         if(results.count > 0){
             var res = results[0] as! NSManagedObject
             txtAccessToken.text = res.valueForKey("accesstoken") as! String
+        }
+    }
+    
+    
+    @IBAction func btnEnterPressed(){
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Coreinfo")
+        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "coreid = %@", txtCoreID.text)
+        
+        var results:NSArray = context.executeFetchRequest(request, error: nil)!
+        
+        if(results.count > 0){
+            var res = results[0] as! NSManagedObject
+            res.setValue(txtAccessToken.text, forKey: "accesstoken")
+            context.save(nil)
+            println(res)
         }
         else {
             var newCore = NSEntityDescription.insertNewObjectForEntityForName("Coreinfo", inManagedObjectContext: context) as! NSManagedObject
