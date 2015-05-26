@@ -169,7 +169,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="DayView" destination="uPB-xW-SEh" id="79X-rY-eLD"/>
                         <outlet property="Hours3View" destination="PKL-Og-28z" id="JqW-q4-Hiw"/>
                         <outlet property="WeeklyView" destination="HxF-ib-Qda" id="6mX-fJ-vVM"/>
                         <outlet property="bntBack" destination="tCd-QP-gik" id="Ime-ng-tf1"/>

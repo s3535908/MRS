@@ -19,10 +19,11 @@
 		BCBD2BEE1B14603200703CEC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BED1B14603200703CEC /* Model.swift */; };
 		BCBD2C0E1B149DDF00703CEC /* DrawPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C091B149DDF00703CEC /* DrawPieChart.swift */; };
 		BCBD2C0F1B149DDF00703CEC /* Hours3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0A1B149DDF00703CEC /* Hours3View.swift */; };
-		BCBD2C101B149DDF00703CEC /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0B1B149DDF00703CEC /* DayView.swift */; };
 		BCBD2C111B149DDF00703CEC /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0C1B149DDF00703CEC /* PieChartViewController.swift */; };
 		BCBD2C121B149DDF00703CEC /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0D1B149DDF00703CEC /* WeeklyView.swift */; };
 		BCBD2C141B149F9400703CEC /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C131B149F9400703CEC /* DescriptionView.swift */; };
+		BCBD2C191B14A73600703CEC /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C181B14A73600703CEC /* DayView.swift */; };
+		BCBD2C1B1B14B1EF00703CEC /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCBD2C1A1B14B1EF00703CEC /* ReadMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +53,11 @@
 		BCBD2BED1B14603200703CEC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BCBD2C091B149DDF00703CEC /* DrawPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPieChart.swift; sourceTree = "<group>"; };
 		BCBD2C0A1B149DDF00703CEC /* Hours3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hours3View.swift; sourceTree = "<group>"; };
-		BCBD2C0B1B149DDF00703CEC /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		BCBD2C0C1B149DDF00703CEC /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		BCBD2C0D1B149DDF00703CEC /* WeeklyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
 		BCBD2C131B149F9400703CEC /* DescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		BCBD2C181B14A73600703CEC /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		BCBD2C1A1B14B1EF00703CEC /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		BCBD2BBF1B145BF600703CEC /* PosturePlus */ = {
 			isa = PBXGroup;
 			children = (
+				BCBD2C1A1B14B1EF00703CEC /* ReadMe.txt */,
 				BCBD2BC21B145BF600703CEC /* AppDelegate.swift */,
 				BCBD2BED1B14603200703CEC /* Model.swift */,
 				BCBD2C081B149D9F00703CEC /* Controller */,
@@ -140,7 +143,7 @@
 			children = (
 				BCBD2C091B149DDF00703CEC /* DrawPieChart.swift */,
 				BCBD2C0A1B149DDF00703CEC /* Hours3View.swift */,
-				BCBD2C0B1B149DDF00703CEC /* DayView.swift */,
+				BCBD2C181B14A73600703CEC /* DayView.swift */,
 				BCBD2C0D1B149DDF00703CEC /* WeeklyView.swift */,
 				BCBD2C0C1B149DDF00703CEC /* PieChartViewController.swift */,
 				BCBD2BC71B145BF600703CEC /* CoreInfoViewController.swift */,
@@ -234,6 +237,7 @@
 				BCBD2BCB1B145BF600703CEC /* Main.storyboard in Resources */,
 				BCBD2BD01B145BF600703CEC /* LaunchScreen.xib in Resources */,
 				BCBD2BEA1B145E1B00703CEC /* PP_logo.png in Resources */,
+				BCBD2C1B1B14B1EF00703CEC /* ReadMe.txt in Resources */,
 				BCBD2BCD1B145BF600703CEC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,8 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCBD2BEE1B14603200703CEC /* Model.swift in Sources */,
+				BCBD2C191B14A73600703CEC /* DayView.swift in Sources */,
 				BCBD2BC81B145BF600703CEC /* CoreInfoViewController.swift in Sources */,
-				BCBD2C101B149DDF00703CEC /* DayView.swift in Sources */,
 				BCBD2C0F1B149DDF00703CEC /* Hours3View.swift in Sources */,
 				BCBD2BC61B145BF600703CEC /* PosturePlus.xcdatamodeld in Sources */,
 				BCBD2C0E1B149DDF00703CEC /* DrawPieChart.swift in Sources */,

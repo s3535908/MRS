@@ -10,6 +10,7 @@ import UIKit
 
 class DescriptionView: UIView {
     
+    //Draws the description to the PieCharts in the PieChartView.
     override func drawRect(rect: CGRect) {
         
         var GoodPosture = UIBezierPath(arcCenter: CGPoint(x: bounds.width/6, y: 20),

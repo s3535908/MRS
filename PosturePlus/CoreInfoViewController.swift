@@ -18,6 +18,7 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtCoreID: UITextField!
     @IBOutlet weak var btnEnter: UIButton!
     
+    //Fetch the AccessToken if the CoreID is already registered in the CoreDatabase, and fill it in the AccessToken textField..
     @IBAction func CoreIDChanged(){
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
@@ -34,7 +35,7 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
+    //Saves the CoreID and AccessToken to the CoreDatabase. If the CoreID is already registered, the AccessToken is updated.
     @IBAction func btnEnterPressed(){
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
@@ -83,11 +84,13 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    //Sets the buttons graphic
     func DrawButton() {
         btnEnter.backgroundColor = color1
         btnEnter.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
     
+    //Loads the logo on the View.
     func DrawLogo() {
         var imageViewObject :UIImageView
         imageViewObject = UIImageView(frame:CGRectMake(50, 60, 389*0.6, 83*0.6))

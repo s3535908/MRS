@@ -9,6 +9,7 @@ import UIKit
 
 class DrawPieChart {
 
+//Draws the PieChart.
 func DrawPC(GoodPostureValue:CGFloat, BadPostureValue:CGFloat, Height:CGFloat, Width:CGFloat){
     
     let center = CGPoint(x:Width/2, y: Height/2)

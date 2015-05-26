@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+//declaring universal variables.
+
 var color1: UIColor = UIColor(red: 0.35, green: 0.75, blue: 0.45, alpha: 1.0)
 var color2: UIColor = UIColor(red: 0.80, green: 0.35, blue: 0.35, alpha: 1.0)
 let π:CGFloat = CGFloat(M_PI)
@@ -21,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Model().startTimer()
+        Model().startTimer() //when the application launch, the startTimer function in the Model is called.
         return true
     }
 
@@ -46,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        Model().stopTimer()
+        Model().stopTimer() //when the application terminates, the stopTimer function in the Model is called.
         self.saveContext()
     }
 

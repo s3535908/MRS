@@ -10,6 +10,7 @@ import UIKit
 
 class DrawFrame: UIView {
 
+    //Draws a frame around the CoreID and AccessToken textfields and labels in the CoreInfoView.
     let OutlineWidth = CGFloat(5.0)
     
     override func drawRect(rect: CGRect) {
