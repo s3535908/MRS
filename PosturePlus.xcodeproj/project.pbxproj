@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		BCBD2BC31B145BF600703CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BC21B145BF600703CEC /* AppDelegate.swift */; };
 		BCBD2BC61B145BF600703CEC /* PosturePlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BC41B145BF600703CEC /* PosturePlus.xcdatamodeld */; };
-		BCBD2BC81B145BF600703CEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BC71B145BF600703CEC /* ViewController.swift */; };
+		BCBD2BC81B145BF600703CEC /* CoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BC71B145BF600703CEC /* CoreInfoViewController.swift */; };
 		BCBD2BCB1B145BF600703CEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBD2BC91B145BF600703CEC /* Main.storyboard */; };
 		BCBD2BCD1B145BF600703CEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCBD2BCC1B145BF600703CEC /* Images.xcassets */; };
 		BCBD2BD01B145BF600703CEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBD2BCE1B145BF600703CEC /* LaunchScreen.xib */; };
 		BCBD2BDC1B145BF600703CEC /* PosturePlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BDB1B145BF600703CEC /* PosturePlusTests.swift */; };
+		BCBD2BE81B145C7E00703CEC /* DrawFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BE71B145C7E00703CEC /* DrawFrame.swift */; };
+		BCBD2BEA1B145E1B00703CEC /* PP_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBD2BE91B145E1B00703CEC /* PP_logo.png */; };
+		BCBD2BEE1B14603200703CEC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BED1B14603200703CEC /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +34,16 @@
 		BCBD2BC11B145BF600703CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCBD2BC21B145BF600703CEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCBD2BC51B145BF600703CEC /* PosturePlus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosturePlus.xcdatamodel; sourceTree = "<group>"; };
-		BCBD2BC71B145BF600703CEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCBD2BC71B145BF600703CEC /* CoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreInfoViewController.swift; sourceTree = "<group>"; };
 		BCBD2BCA1B145BF600703CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCBD2BCC1B145BF600703CEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BCBD2BCF1B145BF600703CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BCBD2BD51B145BF600703CEC /* PosturePlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosturePlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBD2BDA1B145BF600703CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCBD2BDB1B145BF600703CEC /* PosturePlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePlusTests.swift; sourceTree = "<group>"; };
+		BCBD2BE71B145C7E00703CEC /* DrawFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawFrame.swift; sourceTree = "<group>"; };
+		BCBD2BE91B145E1B00703CEC /* PP_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PP_logo.png; path = ../PP_logo.png; sourceTree = "<group>"; };
+		BCBD2BED1B14603200703CEC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				BCBD2BC21B145BF600703CEC /* AppDelegate.swift */,
-				BCBD2BC71B145BF600703CEC /* ViewController.swift */,
+				BCBD2BED1B14603200703CEC /* Model.swift */,
+				BCBD2BC71B145BF600703CEC /* CoreInfoViewController.swift */,
+				BCBD2BE71B145C7E00703CEC /* DrawFrame.swift */,
 				BCBD2BC91B145BF600703CEC /* Main.storyboard */,
 				BCBD2BCC1B145BF600703CEC /* Images.xcassets */,
 				BCBD2BCE1B145BF600703CEC /* LaunchScreen.xib */,
@@ -93,6 +101,7 @@
 		BCBD2BC01B145BF600703CEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BCBD2BE91B145E1B00703CEC /* PP_logo.png */,
 				BCBD2BC11B145BF600703CEC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -164,6 +173,7 @@
 				TargetAttributes = {
 					BCBD2BBC1B145BF600703CEC = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 8LELQL34M8;
 					};
 					BCBD2BD41B145BF600703CEC = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -197,6 +207,7 @@
 			files = (
 				BCBD2BCB1B145BF600703CEC /* Main.storyboard in Resources */,
 				BCBD2BD01B145BF600703CEC /* LaunchScreen.xib in Resources */,
+				BCBD2BEA1B145E1B00703CEC /* PP_logo.png in Resources */,
 				BCBD2BCD1B145BF600703CEC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCBD2BC81B145BF600703CEC /* ViewController.swift in Sources */,
+				BCBD2BEE1B14603200703CEC /* Model.swift in Sources */,
+				BCBD2BC81B145BF600703CEC /* CoreInfoViewController.swift in Sources */,
 				BCBD2BC61B145BF600703CEC /* PosturePlus.xcdatamodeld in Sources */,
 				BCBD2BC31B145BF600703CEC /* AppDelegate.swift in Sources */,
+				BCBD2BE81B145C7E00703CEC /* DrawFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PosturePlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PosturePlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

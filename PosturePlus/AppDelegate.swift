@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+var color1: UIColor = UIColor(red: 0.35, green: 0.75, blue: 0.45, alpha: 1.0)
+var color2: UIColor = UIColor(red: 0.80, green: 0.35, blue: 0.35, alpha: 1.0)
+let π:CGFloat = CGFloat(M_PI)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
