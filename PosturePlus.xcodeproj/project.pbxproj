@@ -17,6 +17,12 @@
 		BCBD2BE81B145C7E00703CEC /* DrawFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BE71B145C7E00703CEC /* DrawFrame.swift */; };
 		BCBD2BEA1B145E1B00703CEC /* PP_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBD2BE91B145E1B00703CEC /* PP_logo.png */; };
 		BCBD2BEE1B14603200703CEC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2BED1B14603200703CEC /* Model.swift */; };
+		BCBD2C0E1B149DDF00703CEC /* DrawPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C091B149DDF00703CEC /* DrawPieChart.swift */; };
+		BCBD2C0F1B149DDF00703CEC /* Hours3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0A1B149DDF00703CEC /* Hours3View.swift */; };
+		BCBD2C101B149DDF00703CEC /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0B1B149DDF00703CEC /* DayView.swift */; };
+		BCBD2C111B149DDF00703CEC /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0C1B149DDF00703CEC /* PieChartViewController.swift */; };
+		BCBD2C121B149DDF00703CEC /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C0D1B149DDF00703CEC /* WeeklyView.swift */; };
+		BCBD2C141B149F9400703CEC /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C131B149F9400703CEC /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		BCBD2BE71B145C7E00703CEC /* DrawFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawFrame.swift; sourceTree = "<group>"; };
 		BCBD2BE91B145E1B00703CEC /* PP_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PP_logo.png; path = ../PP_logo.png; sourceTree = "<group>"; };
 		BCBD2BED1B14603200703CEC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BCBD2C091B149DDF00703CEC /* DrawPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPieChart.swift; sourceTree = "<group>"; };
+		BCBD2C0A1B149DDF00703CEC /* Hours3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hours3View.swift; sourceTree = "<group>"; };
+		BCBD2C0B1B149DDF00703CEC /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		BCBD2C0C1B149DDF00703CEC /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		BCBD2C0D1B149DDF00703CEC /* WeeklyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
+		BCBD2C131B149F9400703CEC /* DescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +99,7 @@
 			children = (
 				BCBD2BC21B145BF600703CEC /* AppDelegate.swift */,
 				BCBD2BED1B14603200703CEC /* Model.swift */,
-				BCBD2BC71B145BF600703CEC /* CoreInfoViewController.swift */,
-				BCBD2BE71B145C7E00703CEC /* DrawFrame.swift */,
+				BCBD2C081B149D9F00703CEC /* Controller */,
 				BCBD2BC91B145BF600703CEC /* Main.storyboard */,
 				BCBD2BCC1B145BF600703CEC /* Images.xcassets */,
 				BCBD2BCE1B145BF600703CEC /* LaunchScreen.xib */,
@@ -122,6 +133,21 @@
 				BCBD2BDA1B145BF600703CEC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCBD2C081B149D9F00703CEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCBD2C091B149DDF00703CEC /* DrawPieChart.swift */,
+				BCBD2C0A1B149DDF00703CEC /* Hours3View.swift */,
+				BCBD2C0B1B149DDF00703CEC /* DayView.swift */,
+				BCBD2C0D1B149DDF00703CEC /* WeeklyView.swift */,
+				BCBD2C0C1B149DDF00703CEC /* PieChartViewController.swift */,
+				BCBD2BC71B145BF600703CEC /* CoreInfoViewController.swift */,
+				BCBD2BE71B145C7E00703CEC /* DrawFrame.swift */,
+				BCBD2C131B149F9400703CEC /* DescriptionView.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +254,13 @@
 			files = (
 				BCBD2BEE1B14603200703CEC /* Model.swift in Sources */,
 				BCBD2BC81B145BF600703CEC /* CoreInfoViewController.swift in Sources */,
+				BCBD2C101B149DDF00703CEC /* DayView.swift in Sources */,
+				BCBD2C0F1B149DDF00703CEC /* Hours3View.swift in Sources */,
 				BCBD2BC61B145BF600703CEC /* PosturePlus.xcdatamodeld in Sources */,
+				BCBD2C0E1B149DDF00703CEC /* DrawPieChart.swift in Sources */,
+				BCBD2C111B149DDF00703CEC /* PieChartViewController.swift in Sources */,
+				BCBD2C141B149F9400703CEC /* DescriptionView.swift in Sources */,
+				BCBD2C121B149DDF00703CEC /* WeeklyView.swift in Sources */,
 				BCBD2BC31B145BF600703CEC /* AppDelegate.swift in Sources */,
 				BCBD2BE81B145C7E00703CEC /* DrawFrame.swift in Sources */,
 			);
@@ -428,6 +460,7 @@
 				BCBD2BE11B145BF600703CEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCBD2BE21B145BF600703CEC /* Build configuration list for PBXNativeTarget "PosturePlusTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +469,7 @@
 				BCBD2BE41B145BF600703CEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

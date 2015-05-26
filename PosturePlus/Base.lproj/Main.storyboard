@@ -77,10 +77,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Pie Chart View Controller-->
         <scene sceneID="7qs-ff-Occ">
             <objects>
-                <viewController id="la2-fz-4Ai" sceneMemberID="viewController">
+                <viewController id="la2-fz-4Ai" customClass="PieChartViewController" customModule="PosturePlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K0A-f9-ROc"/>
                         <viewControllerLayoutGuide type="bottom" id="AnT-Y5-hcO"/>
@@ -88,12 +88,102 @@
                     <view key="view" contentMode="scaleToFill" id="oq9-Xq-41o">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPB-xW-SEh" customClass="DayView" customModule="PosturePlus" customModuleProvider="target">
+                                <rect key="frame" x="28" y="305" width="125" height="125"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxF-ib-Qda" customClass="WeeklyView" customModule="PosturePlus" customModuleProvider="target">
+                                <rect key="frame" x="209" y="465" width="125" height="125"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-Og-28z" customClass="Hours3View" customModule="PosturePlus" customModuleProvider="target">
+                                <rect key="frame" x="209" y="149" width="125" height="125"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfc-ll-Ol0">
+                                <rect key="frame" x="62" y="201" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivy-QV-bjB">
+                                <rect key="frame" x="263" y="342" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK7-eJ-5V2">
+                                <rect key="frame" x="62" y="529" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkS-Um-gtJ" customClass="DescriptionView" customModule="PosturePlus" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="124" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good Posture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-ZU-yoi">
+                                        <rect key="frame" x="46" y="10" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bad Posture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mv-hR-opb">
+                                        <rect key="frame" x="46" y="38" width="69" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not In Use" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej9-DF-BoV">
+                                        <rect key="frame" x="46" y="69" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98u-9w-QkG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="3qX-nS-mAi">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="iAL-C7-eOg">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tCd-QP-gik">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="vXZ-lx-hvc" kind="show" id="xh5-vs-jgB"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PKL-Og-28z" firstAttribute="top" secondItem="JkS-Um-gtJ" secondAttribute="bottom" constant="35" id="qR6-pE-wRj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DayView" destination="uPB-xW-SEh" id="79X-rY-eLD"/>
+                        <outlet property="Hours3View" destination="PKL-Og-28z" id="JqW-q4-Hiw"/>
+                        <outlet property="WeeklyView" destination="HxF-ib-Qda" id="6mX-fJ-vVM"/>
+                        <outlet property="bntBack" destination="tCd-QP-gik" id="Ime-ng-tf1"/>
+                        <outlet property="lbl3Hours" destination="tfc-ll-Ol0" id="lc3-WU-Luh"/>
+                        <outlet property="lblBadPosture" destination="6mv-hR-opb" id="1Nk-74-yqG"/>
+                        <outlet property="lblDay" destination="Ivy-QV-bjB" id="yaQ-jh-qZN"/>
+                        <outlet property="lblGoodPosture" destination="GkN-ZU-yoi" id="lkf-vP-uF8"/>
+                        <outlet property="lblNotInUse" destination="Ej9-DF-BoV" id="Tkt-pi-4SV"/>
+                        <outlet property="lblWeekly" destination="YK7-eJ-5V2" id="qUm-pP-B0z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7S-G6-dlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="239"/>
+            <point key="canvasLocation" x="994" y="239"/>
         </scene>
     </scenes>
 </document>
