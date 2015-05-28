@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8s-YA-1GO" customClass="DrawFrame" customModule="PosturePlus" customModuleProvider="target">
@@ -119,37 +119,31 @@
                         <viewControllerLayoutGuide type="bottom" id="AnT-Y5-hcO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oq9-Xq-41o">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPB-xW-SEh" customClass="DayView" customModule="PosturePlus" customModuleProvider="target">
-                                <rect key="frame" x="28" y="305" width="130" height="130"/>
+                                <rect key="frame" x="43" y="255" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-Og-28z" customClass="Hours3View" customModule="PosturePlus" customModuleProvider="target">
-                                <rect key="frame" x="209" y="149" width="130" height="130"/>
+                                <rect key="frame" x="182" y="120" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text=" Last 3 hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfc-ll-Ol0">
-                                <rect key="frame" x="42" y="201" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="46" y="185" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Last day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivy-QV-bjB">
-                                <rect key="frame" x="263" y="342" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK7-eJ-5V2">
-                                <rect key="frame" x="62" y="529" width="60" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="260" y="320" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkS-Um-gtJ" customClass="DescriptionView" customModule="PosturePlus" customModuleProvider="target">
-                                <rect key="frame" x="39" y="62" width="114" height="96"/>
+                                <rect key="frame" x="20" y="52" width="114" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good Posture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-ZU-yoi">
                                         <rect key="frame" x="34" y="8" width="78" height="21"/>
@@ -193,27 +187,35 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxF-ib-Qda" customClass="WeeklyView" customModule="PosturePlus" customModuleProvider="target">
-                                <rect key="frame" x="209" y="440" width="130" height="130"/>
+                                <rect key="frame" x="182" y="390" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK7-eJ-5V2">
+                                <rect key="frame" x="56" y="455" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YK7-eJ-5V2" firstAttribute="leading" secondItem="oq9-Xq-41o" secondAttribute="leadingMargin" constant="10" id="4x2-Xx-1Y9"/>
-                            <constraint firstItem="AnT-Y5-hcO" firstAttribute="top" secondItem="HxF-ib-Qda" secondAttribute="bottom" constant="30" id="AQ1-Fm-Mxi"/>
-                            <constraint firstItem="uPB-xW-SEh" firstAttribute="top" secondItem="K0A-f9-ROc" secondAttribute="bottom" constant="250" id="SWY-dK-SE9"/>
-                            <constraint firstItem="JkS-Um-gtJ" firstAttribute="top" secondItem="98u-9w-QkG" secondAttribute="bottom" constant="10" id="YJh-fb-U4t"/>
-                            <constraint firstAttribute="centerX" secondItem="HxF-ib-Qda" secondAttribute="centerX" priority="750" constant="-65" id="all-9E-2HO"/>
-                            <constraint firstItem="PKL-Og-28z" firstAttribute="top" secondItem="K0A-f9-ROc" secondAttribute="bottom" constant="110" id="brw-bH-vD3"/>
+                            <constraint firstItem="HxF-ib-Qda" firstAttribute="top" secondItem="K0A-f9-ROc" secondAttribute="bottom" constant="370" id="2XA-1y-hWP"/>
+                            <constraint firstItem="YK7-eJ-5V2" firstAttribute="leading" secondItem="oq9-Xq-41o" secondAttribute="leadingMargin" constant="40" id="4x2-Xx-1Y9"/>
+                            <constraint firstItem="uPB-xW-SEh" firstAttribute="top" secondItem="K0A-f9-ROc" secondAttribute="bottom" constant="235" id="SWY-dK-SE9"/>
+                            <constraint firstItem="JkS-Um-gtJ" firstAttribute="top" secondItem="98u-9w-QkG" secondAttribute="bottom" constant="5" id="YJh-fb-U4t"/>
+                            <constraint firstAttribute="centerX" secondItem="HxF-ib-Qda" secondAttribute="centerX" priority="750" constant="-70" id="all-9E-2HO"/>
+                            <constraint firstItem="PKL-Og-28z" firstAttribute="top" secondItem="K0A-f9-ROc" secondAttribute="bottom" constant="100" id="brw-bH-vD3"/>
                             <constraint firstItem="JkS-Um-gtJ" firstAttribute="leading" secondItem="oq9-Xq-41o" secondAttribute="leadingMargin" constant="5" id="kaV-zp-kxU"/>
-                            <constraint firstAttribute="centerX" secondItem="PKL-Og-28z" secondAttribute="centerX" priority="750" constant="-65" id="l9A-0U-GXC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ivy-QV-bjB" secondAttribute="trailing" constant="10" id="n23-BC-UMm"/>
+                            <constraint firstAttribute="centerX" secondItem="PKL-Og-28z" secondAttribute="centerX" priority="750" constant="-70" id="l9A-0U-GXC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ivy-QV-bjB" secondAttribute="trailing" constant="40" id="n23-BC-UMm"/>
                             <constraint firstItem="HxF-ib-Qda" firstAttribute="centerY" secondItem="YK7-eJ-5V2" secondAttribute="centerY" priority="750" id="nte-5m-I65"/>
-                            <constraint firstItem="tfc-ll-Ol0" firstAttribute="centerY" secondItem="PKL-Og-28z" secondAttribute="centerY" constant="-2.5" id="x9K-at-ltq"/>
+                            <constraint firstItem="tfc-ll-Ol0" firstAttribute="leading" secondItem="oq9-Xq-41o" secondAttribute="leadingMargin" constant="30" id="wYn-g1-9qk"/>
+                            <constraint firstItem="tfc-ll-Ol0" firstAttribute="centerY" secondItem="PKL-Og-28z" secondAttribute="centerY" id="x9K-at-ltq"/>
                             <constraint firstItem="uPB-xW-SEh" firstAttribute="centerY" secondItem="Ivy-QV-bjB" secondAttribute="centerY" priority="750" id="xpy-yD-8cN"/>
-                            <constraint firstAttribute="centerX" secondItem="uPB-xW-SEh" secondAttribute="centerX" priority="750" constant="65" id="zbC-vf-Gkc"/>
+                            <constraint firstAttribute="centerX" secondItem="uPB-xW-SEh" secondAttribute="centerX" priority="750" constant="70" id="zbC-vf-Gkc"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="DayView" destination="uPB-xW-SEh" id="FNl-uO-h6G"/>
                         <outlet property="DescriptionView" destination="JkS-Um-gtJ" id="EgY-fJ-qea"/>
@@ -230,7 +232,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7S-G6-dlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="239"/>
+            <point key="canvasLocation" x="993.5" y="238.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9mi-2M-rjH">
+            <objects>
+                <viewController id="Vzo-Jt-J4K" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h6A-iv-mJ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="78a-lt-STp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RRf-CV-hBg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etJ-5o-6pD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="205"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
