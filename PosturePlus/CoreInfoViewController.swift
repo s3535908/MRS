@@ -16,9 +16,29 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtAccessToken: UITextField!
     @IBOutlet weak var lblCoreID: UILabel!
     @IBOutlet weak var txtCoreID: UITextField!
-    @IBOutlet weak var btnEnter: UIButton!
+    @IBOutlet weak var btnUpdateCore: UIButton!
+    @IBOutlet weak var lblUsername: UILabel!
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var btnCharts: UIButton!
     
     //Fetch the AccessToken if the CoreID is already registered in the CoreDatabase, and fill it in the AccessToken textField..
+    @IBAction func UsernameChanged(){
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Coreinfo")
+        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "username = %@", txtUsername.text)
+        
+        var results:NSArray = context.executeFetchRequest(request, error: nil)!
+        
+        if(results.count > 0){
+            var res = results[0] as! NSManagedObject
+            txtAccessToken.text = res.valueForKey("accesstoken") as! String
+            txtCoreID.text = res.valueForKey("coreid") as! String
+        }
+    }
+    
     @IBAction func CoreIDChanged(){
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
@@ -32,11 +52,12 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
         if(results.count > 0){
             var res = results[0] as! NSManagedObject
             txtAccessToken.text = res.valueForKey("accesstoken") as! String
+            txtUsername.text = res.valueForKey("username") as! String
         }
     }
     
     //Saves the CoreID and AccessToken to the CoreDatabase. If the CoreID is already registered, the AccessToken is updated.
-    @IBAction func btnEnterPressed(){
+    @IBAction func btnUpdateCorePressed(){
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         
@@ -49,6 +70,7 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
             if(results.count > 0){
                 var res = results[0] as! NSManagedObject
                 res.setValue(txtAccessToken.text, forKey: "accesstoken")
+                res.setValue(txtUsername.text, forKey: "username")
                 UniCoreID = txtCoreID.text
                 UniAccessToken = txtAccessToken.text
                 context.save(nil)
@@ -56,6 +78,7 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
             }
             else {
                 var newCore = NSEntityDescription.insertNewObjectForEntityForName("Coreinfo", inManagedObjectContext: context) as! NSManagedObject
+                newCore.setValue(txtUsername.text, forKey: "username")
                 newCore.setValue(txtAccessToken.text, forKey: "accesstoken")
                 newCore.setValue(txtCoreID.text, forKey: "coreid")
                 UniCoreID = txtCoreID.text
@@ -69,10 +92,11 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.txtCoreID.delegate = self;
-        self.txtAccessToken.delegate = self;
+        self.txtCoreID.delegate = self
+        self.txtAccessToken.delegate = self
+        self.txtUsername.delegate = self
         
-        self.DrawButton()
+        self.DrawButtons()
         self.DrawLogo()
     }
     
@@ -87,18 +111,29 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
     }
     
     //Sets the buttons graphic
-    func DrawButton() {
-        btnEnter.backgroundColor = color1
-        btnEnter.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+    func DrawButtons() {
+        btnUpdateCore.backgroundColor = color1
+        btnUpdateCore.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        btnCharts.backgroundColor = color1
+        btnCharts.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
     
     //Loads the logo on the View.
     func DrawLogo() {
         var imageViewObject :UIImageView
-        imageViewObject = UIImageView(frame:CGRectMake(50, 60, 389*0.6, 83*0.6))
+        imageViewObject = UIImageView(frame:CGRectMake(65, 45
+            , 389*0.5, 83*0.5))
         imageViewObject.image = UIImage(named:"PP_logo.png")
         self.view.addSubview(imageViewObject)
         self.view.sendSubviewToBack(imageViewObject)
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return UIInterfaceOrientation.Portrait.rawValue
     }
 }
 

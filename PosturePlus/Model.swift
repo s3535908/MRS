@@ -34,7 +34,7 @@ class Model {
         
         var request = NSFetchRequest(entityName: "Data")
         request.returnsObjectsAsFaults = false
-        request.predicate = NSPredicate(format: "coreid = %@", UniCoreID)
+        request.predicate = NSPredicate(format: "coreid = %@", UniCoreID ?? "")
         
         let TimeRange:Double = NSDate().timeIntervalSince1970-time
 
