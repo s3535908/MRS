@@ -12,7 +12,7 @@ import CoreData
 
 class Model {
     
-    //Temporary functions to provide a value for the PieCharts. Has to be replaced with methods that computes values based on the Time and Posturevalue from the API call saved as CoreData.
+
     func PieChartDataGood() -> Int {
         let HoursOfGoodPosture:Int = 5
         
@@ -24,6 +24,54 @@ class Model {
         
         return HoursOfBadPosture
     }
+    
+    func getPCdata(time:Double) -> (GPData:Int, BPData:Int){
+        let GPData:Int!
+        let BPData:Int!
+        
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Data")
+        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "coreid = %@", UniCoreID)
+        
+        let TimeRange:Double = NSDate().timeIntervalSince1970-time
+
+        let TimePredicate = NSPredicate(format: "time >= \(TimeRange) ")
+        let GPPredicate = NSPredicate(format: "postureval = 1")
+        let BPPredicate = NSPredicate(format: "postureval = 2")
+        
+        var results:NSArray = context.executeFetchRequest(request, error: nil)!
+
+        results = results.filteredArrayUsingPredicate(TimePredicate)
+        var GPresults:NSArray = results.filteredArrayUsingPredicate(GPPredicate)
+        var BPresults:NSArray = results.filteredArrayUsingPredicate(BPPredicate)
+
+        if(GPresults.count > 0){
+            println(GPresults.count)
+            println("Good Posture")
+            GPData = GPresults.count;
+        }
+        else {
+            GPData = 0
+        }
+        
+        if(BPresults.count > 0){
+            println(BPresults.count)
+            println("Bad Posture")
+            BPData = BPresults.count;
+        }
+        else {
+            BPData = 0;
+        }
+        return (GPData, BPData)
+    }
+    
+    
+    
+    
+    
     
     
     var timer: dispatch_source_t!
@@ -60,19 +108,15 @@ class Model {
     }
     
     func saveCoreData(Time:Int, PostureVal:Int) {
-        print(Time)
-        print(PostureVal)
-        print(UniCoreID)
-        println()
         
-//        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-//        var context:NSManagedObjectContext = appDel.managedObjectContext!
-//        var request = NSFetchRequest(entityName: "Coredata")
-//        request.returnsObjectsAsFaults = false
-//        
-//        var newData = NSEntityDescription.insertNewObjectForEntityForName("Coredata", inManagedObjectContext: context) as! NSManagedObject
-//        newData.setValue(Time, forKey: "time")
-//        context.save(nil)
-//        println(newData)
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var newData = NSEntityDescription.insertNewObjectForEntityForName("Data", inManagedObjectContext: context) as! NSManagedObject
+        newData.setValue(Time, forKey: "time")
+        newData.setPrimitiveValue(PostureVal, forKey: "postureval")
+        newData.setPrimitiveValue(UniCoreID, forKey: "coreid")
+        context.save(nil)
+        println(newData)
     }
 }

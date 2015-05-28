@@ -9,14 +9,17 @@
 import UIKit
 
 class Hours3View: UIView {
-        
-        var HoursOfGoodPosture = CGFloat(Model().PieChartDataGood())
-        var HoursOfBadPosture = CGFloat(Model().PieChartDataBad())
-        
+    
+    func PC3hours(){
+    let time:Double = 10800
+        let data:Int = Model.getPCdata()
+    var HoursOfGoodPosture = CGFloat(data.GPData)
+    var HoursOfBadPosture = CGFloat(data.BPData)
+    }
         override func drawRect(rect: CGRect) {
             
-            let GoodPostureValue = HoursOfGoodPosture/24*2*π
-            let BadPostureValue = HoursOfBadPosture/24*2*π
+            let GoodPostureValue = HoursOfGoodPosture/3*2*π
+            let BadPostureValue = HoursOfBadPosture/3*2*π
             let height = bounds.height
             let width = bounds.width
             

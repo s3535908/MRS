@@ -10,10 +10,12 @@ import UIKit
 
 class DayView: UIView {
     
+    func PCday() {
+    
     var HoursOfGoodPosture = CGFloat(Model().PieChartDataGood())
     var HoursOfBadPosture = CGFloat(Model().PieChartDataBad())
     
-    override func drawRect(rect: CGRect) {
+    func drawRect(rect: CGRect) {
         
         let GoodPostureValue = HoursOfGoodPosture/24*2*π
         let BadPostureValue = HoursOfBadPosture/24*2*π
@@ -21,5 +23,6 @@ class DayView: UIView {
         let width = bounds.width
         
         DrawPieChart().DrawPC(GoodPostureValue, BadPostureValue: BadPostureValue, Height: height, Width: width)
+    }
     }
 }
