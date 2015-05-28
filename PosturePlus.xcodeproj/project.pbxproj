@@ -24,6 +24,7 @@
 		BCBD2C141B149F9400703CEC /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C131B149F9400703CEC /* DescriptionView.swift */; };
 		BCBD2C191B14A73600703CEC /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBD2C181B14A73600703CEC /* DayView.swift */; };
 		BCBD2C1B1B14B1EF00703CEC /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCBD2C1A1B14B1EF00703CEC /* ReadMe.txt */; };
+		BCC4077F1B16C8B100B6CB3C /* JSONdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4077E1B16C8B100B6CB3C /* JSONdata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		BCBD2C131B149F9400703CEC /* DescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		BCBD2C181B14A73600703CEC /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		BCBD2C1A1B14B1EF00703CEC /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		BCC4077E1B16C8B100B6CB3C /* JSONdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONdata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,7 @@
 			children = (
 				BCBD2C1A1B14B1EF00703CEC /* ReadMe.txt */,
 				BCBD2BC21B145BF600703CEC /* AppDelegate.swift */,
-				BCBD2BED1B14603200703CEC /* Model.swift */,
+				BCC4077D1B16BE1700B6CB3C /* Model */,
 				BCBD2C081B149D9F00703CEC /* Controller */,
 				BCBD2BC91B145BF600703CEC /* Main.storyboard */,
 				BCBD2BCC1B145BF600703CEC /* Images.xcassets */,
@@ -151,6 +153,15 @@
 				BCBD2C131B149F9400703CEC /* DescriptionView.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		BCC4077D1B16BE1700B6CB3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCBD2BED1B14603200703CEC /* Model.swift */,
+				BCC4077E1B16C8B100B6CB3C /* JSONdata.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC4077F1B16C8B100B6CB3C /* JSONdata.swift in Sources */,
 				BCBD2BEE1B14603200703CEC /* Model.swift in Sources */,
 				BCBD2C191B14A73600703CEC /* DayView.swift in Sources */,
 				BCBD2BC81B145BF600703CEC /* CoreInfoViewController.swift in Sources */,

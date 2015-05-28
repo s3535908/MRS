@@ -37,32 +37,34 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
     
     //Saves the CoreID and AccessToken to the CoreDatabase. If the CoreID is already registered, the AccessToken is updated.
     @IBAction func btnEnterPressed(){
-        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        var context:NSManagedObjectContext = appDel.managedObjectContext!
-        
-        var request = NSFetchRequest(entityName: "Coreinfo")
-        request.returnsObjectsAsFaults = false
-        request.predicate = NSPredicate(format: "coreid = %@", txtCoreID.text)
-        
-        var results:NSArray = context.executeFetchRequest(request, error: nil)!
-        
-        if(results.count > 0){
-            var res = results[0] as! NSManagedObject
-            res.setValue(txtAccessToken.text, forKey: "accesstoken")
-            context.save(nil)
-            println(res)
-        }
-        else {
-            var newCore = NSEntityDescription.insertNewObjectForEntityForName("Coreinfo", inManagedObjectContext: context) as! NSManagedObject
-            newCore.setValue(txtAccessToken.text, forKey: "accesstoken")
-            newCore.setValue(txtCoreID.text, forKey: "coreid")
-            Model().GSCoreID = txtCoreID.text
-            Model().GSAccessToken = txtAccessToken.text
-            context.save(nil)
-            println(newCore)
-        }
+            var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+            var context:NSManagedObjectContext = appDel.managedObjectContext!
+            
+            var request = NSFetchRequest(entityName: "Coreinfo")
+            request.returnsObjectsAsFaults = false
+            request.predicate = NSPredicate(format: "coreid = %@", txtCoreID.text)
+            
+            var results:NSArray = context.executeFetchRequest(request, error: nil)!
+            
+            if(results.count > 0){
+                var res = results[0] as! NSManagedObject
+                res.setValue(txtAccessToken.text, forKey: "accesstoken")
+                UniCoreID = txtCoreID.text
+                UniAccessToken = txtAccessToken.text
+                context.save(nil)
+                println(res)
+            }
+            else {
+                var newCore = NSEntityDescription.insertNewObjectForEntityForName("Coreinfo", inManagedObjectContext: context) as! NSManagedObject
+                newCore.setValue(txtAccessToken.text, forKey: "accesstoken")
+                newCore.setValue(txtCoreID.text, forKey: "coreid")
+                UniCoreID = txtCoreID.text
+                UniAccessToken = txtAccessToken.text
+                context.save(nil)
+                println(newCore)
+            }
+         Model().startTimer()
     }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

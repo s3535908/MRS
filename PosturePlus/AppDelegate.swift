@@ -14,6 +14,10 @@ import CoreData
 var color1: UIColor = UIColor(red: 0.35, green: 0.75, blue: 0.45, alpha: 1.0)
 var color2: UIColor = UIColor(red: 0.80, green: 0.35, blue: 0.35, alpha: 1.0)
 let π:CGFloat = CGFloat(M_PI)
+var UniAccessToken:String!
+var UniCoreID:String!
+var ValHolder:Int!
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Model().startTimer() //when the application launch, the startTimer function in the Model is called.
         return true
     }
 
