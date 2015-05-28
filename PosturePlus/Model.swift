@@ -64,5 +64,15 @@ class Model {
         print(PostureVal)
         print(UniCoreID)
         println()
+        
+//        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        var context:NSManagedObjectContext = appDel.managedObjectContext!
+//        var request = NSFetchRequest(entityName: "Coredata")
+//        request.returnsObjectsAsFaults = false
+//        
+//        var newData = NSEntityDescription.insertNewObjectForEntityForName("Coredata", inManagedObjectContext: context) as! NSManagedObject
+//        newData.setValue(Time, forKey: "time")
+//        context.save(nil)
+//        println(newData)
     }
 }

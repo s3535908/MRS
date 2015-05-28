@@ -37,9 +37,9 @@ class CoreInfoViewController: UIViewController, UITextFieldDelegate {
     
     //Saves the CoreID and AccessToken to the CoreDatabase. If the CoreID is already registered, the AccessToken is updated.
     @IBAction func btnEnterPressed(){
-            var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-            var context:NSManagedObjectContext = appDel.managedObjectContext!
-            
+        var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
             var request = NSFetchRequest(entityName: "Coreinfo")
             request.returnsObjectsAsFaults = false
             request.predicate = NSPredicate(format: "coreid = %@", txtCoreID.text)
