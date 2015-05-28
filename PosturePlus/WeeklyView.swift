@@ -10,12 +10,17 @@ import UIKit
 
 class WeeklyView: UIView {
 
-    var HoursOfGoodPosture = CGFloat(Model().PieChartDataGood())
-    var HoursOfBadPosture = CGFloat(Model().PieChartDataBad())
+    let data = Model().getPCdata(WeekInSec)
     
     override func drawRect(rect: CGRect) {
-        let GoodPostureValue = HoursOfGoodPosture/168*2*π
-        let BadPostureValue = HoursOfBadPosture/168*2*π
+        
+        var HoursOfGoodPosture = CGFloat(data.GPData)
+        var HoursOfBadPosture = CGFloat(data.BPData)
+        
+        let GoodPostureValue = HoursOfGoodPosture/60*2*π
+        let BadPostureValue = HoursOfBadPosture/60*2*π
+        println(GoodPostureValue)
+        println(BadPostureValue)
         let height = bounds.height
         let width = bounds.width
         

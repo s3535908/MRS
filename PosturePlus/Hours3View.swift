@@ -10,16 +10,17 @@ import UIKit
 
 class Hours3View: UIView {
     
-    func PC3hours(){
-    let time:Double = 10800
-        let data:Int = Model.getPCdata()
-    var HoursOfGoodPosture = CGFloat(data.GPData)
-    var HoursOfBadPosture = CGFloat(data.BPData)
-    }
+        let data = Model().getPCdata(_3HoursInSec)
+        
         override func drawRect(rect: CGRect) {
             
-            let GoodPostureValue = HoursOfGoodPosture/3*2*π
-            let BadPostureValue = HoursOfBadPosture/3*2*π
+            var HoursOfGoodPosture = CGFloat(data.GPData)
+            var HoursOfBadPosture = CGFloat(data.BPData)
+            
+            let GoodPostureValue = HoursOfGoodPosture/15*2*π
+            let BadPostureValue = HoursOfBadPosture/15*2*π
+            println(GoodPostureValue)
+            println(BadPostureValue)
             let height = bounds.height
             let width = bounds.width
             
