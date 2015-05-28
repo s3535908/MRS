@@ -14,13 +14,8 @@ class Hours3View: UIView {
         
         override func drawRect(rect: CGRect) {
             
-            var HoursOfGoodPosture = CGFloat(data.GPData)
-            var HoursOfBadPosture = CGFloat(data.BPData)
-            
-            let GoodPostureValue = HoursOfGoodPosture/15*2*π
-            let BadPostureValue = HoursOfBadPosture/15*2*π
-            println(GoodPostureValue)
-            println(BadPostureValue)
+            let GoodPostureValue = CGFloat(data.GPData)/CGFloat(_3HoursInSec/60)*2*π
+            let BadPostureValue = CGFloat(data.BPData)/CGFloat(_3HoursInSec/60)*2*π
             let height = bounds.height
             let width = bounds.width
             

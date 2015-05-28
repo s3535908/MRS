@@ -14,13 +14,8 @@ class DayView: UIView {
     
     override func drawRect(rect: CGRect) {
         
-        var HoursOfGoodPosture = CGFloat(data.GPData)
-        var HoursOfBadPosture = CGFloat(data.BPData)
-        
-        let GoodPostureValue = HoursOfGoodPosture/30*2*π
-        let BadPostureValue = HoursOfBadPosture/30*2*π
-        println(GoodPostureValue)
-        println(BadPostureValue)
+        var GoodPostureValue = CGFloat(data.GPData)/CGFloat(DayInSec/60)*2*π
+        var BadPostureValue = CGFloat(data.BPData)/CGFloat(DayInSec/60)*2*π
         let height = bounds.height
         let width = bounds.width
         

@@ -45,8 +45,6 @@ class JSONdata {
                     if let VariableVal = (coreData as NSDictionary)["result"] as? Int {
                         if let coreInfo = coreData["coreInfo"] as? NSDictionary {
                             if let deviceID = (coreInfo as NSDictionary)["deviceID"] as? String {
-                                println(deviceID)
-                                println(VariableVal)
                                 ValHolder = VariableVal
                                 completionHandler(result: true)
                             }

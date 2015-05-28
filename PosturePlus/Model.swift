@@ -68,12 +68,6 @@ class Model {
         return (GPData, BPData)
     }
     
-    
-    
-    
-    
-    
-    
     var timer: dispatch_source_t!
     
     //Calls the getData function twice every 60 seconds. First to get the Posturevalue and then to get the Time value.

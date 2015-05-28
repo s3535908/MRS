@@ -14,13 +14,8 @@ class WeeklyView: UIView {
     
     override func drawRect(rect: CGRect) {
         
-        var HoursOfGoodPosture = CGFloat(data.GPData)
-        var HoursOfBadPosture = CGFloat(data.BPData)
-        
-        let GoodPostureValue = HoursOfGoodPosture/60*2*π
-        let BadPostureValue = HoursOfBadPosture/60*2*π
-        println(GoodPostureValue)
-        println(BadPostureValue)
+        let GoodPostureValue = CGFloat(data.GPData)/CGFloat(WeekInSec/60)*2*π
+        let BadPostureValue = CGFloat(data.BPData)/CGFloat(WeekInSec/60)*2*π
         let height = bounds.height
         let width = bounds.width
         

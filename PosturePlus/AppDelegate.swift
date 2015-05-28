@@ -17,9 +17,11 @@ let π:CGFloat = CGFloat(M_PI)
 var UniAccessToken:String!
 var UniCoreID:String!
 var ValHolder:Int!
-var _3HoursInSec:Double = 900
-var DayInSec:Double = 1800
-var WeekInSec:Double = 3600
+var _3HoursInSec:Double = 10800
+var DayInSec:Double = 86400
+var WeekInSec:Double = 604800
+let WeekinMin:Int = Int(round(WeekInSec)) * 60;
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
